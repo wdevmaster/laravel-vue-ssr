@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $v8 = new V8js();
+    $jsOutput = $v8->executeString('
+      var hello = "Hello";
+      var world = "World";
+      hello+" "+world
+    ');   
+    return view('welcome', compact('jsOutput'));
 });
