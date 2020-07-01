@@ -11,12 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    $v8 = new V8js();
-    $jsOutput = $v8->executeString('
-      var hello = "Hello";
-      var world = "World";
-      hello+" "+world
-    ');   
-    return view('welcome', compact('jsOutput'));
-});
+Route::get('/', 'AppController@get');
