@@ -9313,7 +9313,7 @@ renderVueComponentToString(_app__WEBPACK_IMPORTED_MODULE_0__["default"], functio
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/resources/js/server.js */"./resources/js/server.js");
+module.exports = __webpack_require__(/*! /Users/miguellobo/Code/ssr/resources/js/server.js */"./resources/js/server.js");
 
 
 /***/ })
