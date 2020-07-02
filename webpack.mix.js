@@ -15,10 +15,16 @@ mix.js('resources/js/client.js', 'public/js/app.js')
    .js('resources/js/server.js', 'public/js');
    //.sass('resources/sass/app.scss', 'public/css');
 
+if (mix.inProduction()) 
+  mix.version()
+else 
+  mix.sourceMaps()
+
 mix.webpackConfig({
   resolve: {
+    extensions: ['.js', '.json', '.vue'],
     alias: {
-      'vue$': 'vue/dist/vue.runtime.common.js'
+      '~': path.join(__dirname, './resources/js')
     }
   }
 });
