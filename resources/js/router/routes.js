@@ -1,9 +1,9 @@
 function page (path) {
-  return () => import(`~/pages/${path}.vue`).then(m => m.default || m)
+  return () => import(`~/pages/${path}`).then(m => m.default || m)
 }
 
 export default [
-  { path: '/', name: 'welcome', component: page('welcome') },
+  { path: '/', name: 'welcome', component: page('welcome.vue') },
 
-  { path: '*', component: page('errors/404') }
+  { path: '*', component: page('errors/404.vue') }
 ]
