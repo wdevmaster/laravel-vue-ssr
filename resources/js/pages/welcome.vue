@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  // layout: "basic",
+  layout: "default",
   data: () => ({
     title: 'LaraVue SSR'
   })
