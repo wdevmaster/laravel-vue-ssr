@@ -1,8 +1,10 @@
-import App from './components/App.vue';
-import Vue from 'vue';
-import router from './router'
+import Vue from 'vue'
+import router from '~/router'
+import App from '~/components/App'
 
+
+/* eslint-disable no-new */
 export default new Vue({
   router,
-  render: h => h(App)
+  ...App
 });

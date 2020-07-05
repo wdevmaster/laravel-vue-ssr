@@ -4,8 +4,14 @@ function PageComponent(name) {
   };
 }
 
+import Welcome from '~/pages/welcome'
+import Error404 from '~/pages/errors/404'
+
 export default [
-  { path: '/', component: PageComponent('Home'), name: 'home' },
+  { path: '/', name: 'welcome', component: Welcome },
+
   { path: '/about', component: PageComponent('About'), name: 'about' },
-  { path: '/contact', component: PageComponent('Contact'), name: 'contact' }
-]
+  { path: '/contact', component: PageComponent('Contact'), name: 'contact' },
+
+  { path: '*', component: Error404 }
+] 

@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vue/Laravel SSR App</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
   </head>
   <body>
-    {!! $ssr !!}
+    {!! $ssr ?: '<div id="app"></div>' !!}
     <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
   </body>
 </html>
